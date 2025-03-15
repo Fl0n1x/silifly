@@ -1,0 +1,56 @@
+<LoginScreen>:
+    orientation: 'vertical'
+    padding: 8
+    spacing: 8
+
+    Label:
+        text: 'Silify!'
+        font_size: 72
+        color: (0, 1, 0, 1)
+        halign: 'center'
+        valign: 'center'
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5, 'top':.8}
+
+    GridLayout:
+        pos_hint:{'top':.5}
+        cols: 2
+        row_default_height: 40
+        spacing: 10
+        size_hint_y: None
+        height: self.minimum_height
+
+        Label:
+            text: "Your username:"
+            color: (0, 1, 0, 1)
+            font_size:24
+
+        TextInput:
+            id: username
+            multiline: False
+            background_color: (0, 1, 0, 1)
+            size: 140, 50
+            font_size: 24
+
+        Label:
+            text: "Your password:"
+            color: (0, 1, 0, 1)
+            font_size:24
+
+        TextInput:
+            id: password
+            multiline: False
+            background_color: (0, 1, 0, 1)
+            size: 140, 50
+            font_size: 24
+
+    Button:
+        text: "Submit"
+        font_size: 32
+        size_hint: None, None
+        size: 320, 60
+        background_color: (0, 1, 0, 1)
+        background_normal: ''
+        color: (0, 0, 0, 1)
+        on_press: app.on_login(username.text)
+        pos_hint:{'center_x': 0.5, 'center_y':.2}

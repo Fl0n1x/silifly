@@ -1,0 +1,69 @@
+#include "Sidepanel.py"
+
+<DesighMainScreen>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+    Button:
+        text: "Login"
+        on_press: root.clear_screen(None)
+
+<MyGridLayout>:
+    orientation: 'horizontal'
+    padding : 10
+    spacing : 10
+    size_hint_y: None
+    height: "80dp"
+    pos_hint: {'bottom': 0}
+    canvas.before:
+
+        Rectangle:
+            source: 'background.jpg'
+            pos: self.pos
+            size: self.size
+
+    Button:
+        size_hint: None, None
+        size: "60dp", "60dp"
+        background_normal: 'profile.jpg'
+        on_press: root.get_main_screen().profile(None)
+        background_down: 'profile.jpg'    # Зображення при натисканні
+        border: (0, 0, 0, 0)              # Вимикає об'ємний ефект
+        background_color: (1, 1, 1, 1)
+
+    Button:
+        size_hint: None, None
+        size: "60dp", "60dp"
+        background_normal: 'friends.jpg'
+        on_press: root.get_main_screen().friends(None)
+        background_down: 'friends.jpg'    # Зображення при натисканні
+        border: (0, 0, 0, 0)              # Вимикає об'ємний ефект
+        background_color: (1, 1, 1, 1)
+
+    Button:
+        size_hint: None, None
+        size: "60dp", "60dp"
+        background_normal: 'nearestlocation.jpg'
+        on_press: root.get_main_screen().show_layout(None)
+        background_down: 'nearestlocation.jpg'    # Зображення при натисканні
+        border: (0, 0, 0, 0)              # Вимикає об'ємний ефект
+        background_color: (1, 1, 1, 1)
+
+    Button:
+        size_hint: None, None
+        size: "60dp", "60dp"
+        background_normal: 'quests.jpg'
+        on_press: root.get_main_screen().coming_soon(None)
+        background_down: 'quests.jpg'    # Зображення при натисканні
+        border: (0, 0, 0, 0)              # Вимикає об'ємний ефект
+        background_color: (1, 1, 1, 1)
+
+    Button:
+        id:options
+        size_hint: None, None
+        size: "60dp", "60dp"
+        background_normal: 'options.jpg'
+        on_press: root.get_main_screen().toggle_panel(None)  # Викликаємо метод toggle_panel() з головного екрану
+        background_down: 'options.jpg'    # Зображення при натисканні
+        border: (0, 0, 0, 0)              # Вимикає об'ємний ефект
+        background_color: (1, 1, 1, 1)
