@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,4 +22,29 @@
         .openPopup();
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map of Lviv</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+<div id="map" style="height: 100vh;"></div>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([49.8397, 24.0297], 13); // Координати Львова
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    L.marker([49.8397, 24.0297]).addTo(map)
+        .bindPopup("Welcome to Lviv!")
+        .openPopup();
+</script>
+</body>
+>>>>>>> e40092f (Перше збереження)
 </html>
