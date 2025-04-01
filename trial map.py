@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from kivy.garden.mapview import MapView, MapSource
 from kivy.app import App
 
@@ -19,6 +20,8 @@ class MapApp(App):
 if __name__ == "__main__":
     MapApp().run()
 =======
+=======
+>>>>>>> e40092f55d04c23ab952077b0f8c9c2bb8de2dc7
 from kivy.garden.mapview import MapView, MapSource
 from kivy.app import App
 
@@ -38,4 +41,7 @@ class MapApp(App):
 
 if __name__ == "__main__":
     MapApp().run()
+<<<<<<< HEAD
 >>>>>>> e40092f (Перше збереження)
+=======
+>>>>>>> e40092f55d04c23ab952077b0f8c9c2bb8de2dc7
